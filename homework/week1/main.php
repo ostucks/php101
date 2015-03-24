@@ -2,7 +2,8 @@
 
 	// Homework 1
 
-	$input = $argv[1];
+	array_shift($argv);
+	$input = join(' ', $argv);
 
 	function multiplyText($str) {
 		$result = '';
@@ -14,7 +15,7 @@
 		return $result;
 	}
 
-	if ($input === null) {
+	if (empty($input)) {
 		echo "You did not say anything!\n";
 	} else {
 		echo "Your string is this long: " . strlen($input) . PHP_EOL;
